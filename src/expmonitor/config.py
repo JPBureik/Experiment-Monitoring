@@ -28,6 +28,7 @@ from expmonitor.classes.phidget_tc import PhidgetTC
 from expmonitor.classes.tpg261 import TPG261
 from expmonitor.classes.tpg300 import TPG300
 from expmonitor.classes.ups.eaton_ups import EatonUPS
+from expmonitor.classes.webcam import Webcam
 
 # Setup Phidgets:
 tc1 = PhidgetTC('Source', 4, 0)
@@ -46,6 +47,9 @@ sc_vac.spike_filter.spike_length = 2
 
 # Setup batteries:
 batteries = EatonUPS('Batteries', '10.117.51.129')
+
+# Setup webcam:
+zeeman2_vac = Webcam('Zeeman2')
 
 
 """ ---------- DETAILS ---------- """
