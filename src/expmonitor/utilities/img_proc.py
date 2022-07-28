@@ -76,6 +76,11 @@ def img_proc(savepath):
     
     val = float(raw_res)
     
+    if val:
+        
+        return val
     
-    return val if val else None
- 
+    else:
+        
+        return None
+     
