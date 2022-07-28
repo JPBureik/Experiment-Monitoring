@@ -56,7 +56,7 @@ def img_proc(savepath):
     # Converting image from LAB Color model to BGR color spcae
     enhanced_img = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
     
-    contrast_savepath = savepath.split('.png') + '_cropped.png'
+    contrast_savepath = savepath.split('.png')[0] + '_cropped.png'
     
     cv2.imwrite(contrast_savepath, enhanced_img)
     
