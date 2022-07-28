@@ -53,6 +53,6 @@ if __name__ == '__main__':
     while True:
         try:
             iteration(savepath, cam, scp)
-        except (paramiko.buffered_pipe.PipeTimeout, socket.timeout, SCPException):
+        except (paramiko.buffered_pipe.PipeTimeout, socket.timeout):
             continue
         time.sleep(5)
