@@ -16,7 +16,7 @@ def img_proc(savepath):
     
     # Opens a image in RGB mode
     im = Image.open(savepath)
-    # os.remove(savepath)
+    os.remove(savepath)
      
     # Size of the image in pixels (size of original image)
     # (This is not mandatory)
@@ -76,8 +76,6 @@ def img_proc(savepath):
     
     val = float(raw_res)
     
-    print(raw_res, val)
-
     
     return val
  
