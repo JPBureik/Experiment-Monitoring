@@ -44,5 +44,5 @@ class Webcam(Sensor):
 # Execution:
 if __name__ == '__main__':
 
-    from exp_monitor.config import *
+    from expmonitor.config import *
     Webcam.test_execution()
