@@ -51,6 +51,7 @@ batteries = EatonUPS('Batteries', '10.117.51.129')
 # Setup webcam:
 zeeman2_vac = Webcam('Zeeman2')
 zeeman2_vac.spike_filter.spike_threshold_perc = 1e3
+zeeman2_vac.spike_filter.allow_zeros = False
 
 
 
