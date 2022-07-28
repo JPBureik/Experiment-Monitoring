@@ -11,7 +11,7 @@ Created on Thu Jul 28 15:15:51 2022
 
 # Local imports:
 from expmonitor.classes.sensor import Sensor
-from expmonitor.utilities import img_proc
+from expmonitor.utilities.img_proc import img_proc
 
 
 class Webcam(Sensor):
