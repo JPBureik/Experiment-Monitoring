@@ -11,6 +11,7 @@ import paramiko
 from scp import SCPClient
 import os
 import time
+import socket
 
 
 def createSSHClient(server, port, user, password):
@@ -50,5 +51,8 @@ if __name__ == '__main__':
     
     savepath, cam, scp = setup()
     while True:
-        iteration(savepath, cam, scp)
+        try:
+            iteration(savepath, cam, scp)
+        except (paramiko.buffered_pipe.PipeTimeout, socket.timeout, scp.SCPException):
+            continue
         time.sleep(5)
