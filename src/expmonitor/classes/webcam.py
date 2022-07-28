@@ -23,7 +23,7 @@ class Webcam(Sensor):
         self.unit = 'mbar'
         self.conversion_fctn = lambda t: t  # No conversion needed
         super().__init__(
-            self.type, self.descr, self.unit, self.conversion_fctn, num_prec=1
+            self.type, self.descr, self.unit, self.conversion_fctn, num_prec=12
             )
         # Phidget-specific setup:
         self.savepath = r'/mnt/data/webcam/zeeman2/z2.png'
