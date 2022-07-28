@@ -89,7 +89,7 @@ class SpikeFilter():
         baseline = df.drop(self._spike_range.index)
         # Check for zeros:
         if not self.allow_zeros:
-            if np.mean(baseline['Value']) == 0:
+            if baseline['Value'].loc[0] == 0:
                 return True
         if self.percent_change(np.mean(self._spike_range['Value']),
                                np.mean(baseline['Value'])) >= self.spike_threshold_perc:
