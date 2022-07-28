@@ -75,6 +75,8 @@ def img_proc(savepath):
         raw_res = raw_res.replace('€', 'e')
     
     val = float(raw_res)
+    
+    print(raw_res, val)
 
     
     return val
