@@ -77,6 +77,10 @@ def img_proc(savepath):
     elif '&' in raw_res:
         
         raw_res = raw_res.replace('&', 'e')
+        
+    if '-e' in raw_res:
+        
+        raw_res = raw_res.replace('-e', 'e')
     
     val = float(raw_res)
     
