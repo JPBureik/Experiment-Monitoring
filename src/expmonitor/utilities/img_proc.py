@@ -69,9 +69,7 @@ def img_proc(savepath):
     raw_res = pytesseract.image_to_string(imc, lang='eng',config='--psm 6')
     
     raw_res = raw_res.split('\n')[0]
-    
-    print(raw_res)
-    
+        
     if '€' in raw_res:
         
         raw_res = raw_res.replace('€', 'e')
