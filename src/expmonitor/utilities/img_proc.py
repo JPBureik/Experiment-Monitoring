@@ -84,7 +84,16 @@ def img_proc(savepath):
         
         raw_res = raw_res.replace('—-', 'e-')
     
-    val = float(raw_res)
+    try:
+        val = float(raw_res)
+        
+    except ValueError:
+        
+        if '—-' in raw_res:
+            
+            print('—- detected')
+            
+        
     
     if val:
         
