@@ -67,7 +67,6 @@ def img_proc(savepath):
     
     # Read value
     raw_res = pytesseract.image_to_string(imc, lang='eng',config='--psm 6')
-    print(raw_res)
     
     raw_res = raw_res.split('\n')[0]
         
@@ -94,7 +93,7 @@ def img_proc(savepath):
             val = float(raw_res)
             
     # Catch '0' being interpreted as '8':
-    if str(val)[-1] == '8':
+    if str(val)[-1] in ('6', '8'):
         val = float(
             str(val).split('e')[0]
             + 'e'
