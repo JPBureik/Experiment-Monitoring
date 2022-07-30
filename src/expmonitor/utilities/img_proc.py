@@ -67,7 +67,7 @@ def img_proc(savepath):
     
     # Read value
     raw_res = pytesseract.image_to_string(imc, lang='eng',config='--psm 6')
-    print(raw_res)
+
     raw_res = raw_res.split('\n')[0]
     
     # Catch '0' being interpreted as '8':
